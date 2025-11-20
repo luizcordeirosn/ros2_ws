@@ -29,3 +29,13 @@ Depois da compilação, carregue o ambiente com o setup local, por exemplo:
 ```bash
 source install/setup.bash
 ```
+
+## Execução
+
+Para executar um nó do pacote, use o comando `ros2 run`:
+
+```bash
+ros2 run my_py_pkg my_first_node
+```
+
+Certifique-se de que o ambiente está carregado (com `source install/setup.bash`) antes de executar o nó.
