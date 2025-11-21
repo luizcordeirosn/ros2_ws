@@ -99,3 +99,40 @@ ros2 topic echo /robot_news
 ```
 
 Este comando exibe em tempo real as mensagens publicadas no tópico `/robot_news`.
+
+Listar todos os tópicos disponíveis:
+
+```bash
+ros2 topic list
+```
+
+Obter informações detalhadas sobre um tópico:
+
+```bash
+ros2 topic info /robot_news
+```
+
+Verificar a frequência (Hz) das mensagens recebidas:
+
+```bash
+ros2 topic hz /robot_news
+```
+
+Verificar a largura de banda (bw) utilizada pelo tópico:
+
+```bash
+ros2 topic bw /robot_news
+```
+
+Publicar mensagens manualmente em um tópico, com taxa de 5 Hz:
+
+```bash
+ros2 topic pub -r 5 /robot_news example_interfaces/msg/String "data: 'Hello from the terminal'"
+```
+
+## Interfaces
+
+Para visualizar a definição de uma mensagem utilizada por um tópico:
+```bash
+ros2 interface show example_interfaces/msg/String
+```
