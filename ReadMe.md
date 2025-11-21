@@ -87,3 +87,15 @@ rqt_graph
 ```
 
 Certifique-se de que o ambiente está carregado (com `source install/setup.bash`) antes de executar as ferramentas gráficas.
+
+## Tópicos
+
+Para monitorar e inspecionar tópicos ROS 2, use os seguintes comandos:
+
+Visualizar mensagens publicadas em um tópico específico:
+
+```bash
+ros2 topic echo /robot_news
+```
+
+Este comando exibe em tempo real as mensagens publicadas no tópico `/robot_news`.
