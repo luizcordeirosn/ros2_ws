@@ -24,6 +24,12 @@ Para compilar apenas um pacote específico (útil durante o desenvolvimento), us
 colcon build --packages-select my_py_pkg
 ```
 
+Para desenvolvimento mais rápido, use a flag `--symlink-install` para criar links simbólicos em vez de copiar arquivos:
+
+```bash
+colcon build --packages-select my_py_pkg --symlink-install
+```
+
 Depois da compilação, carregue o ambiente com o setup local, por exemplo:
 
 ```bash
@@ -39,3 +45,29 @@ ros2 run my_py_pkg my_first_node
 ```
 
 Certifique-se de que o ambiente está carregado (com `source install/setup.bash`) antes de executar o nó.
+
+## Inspeção
+
+Para inspecionar os nós em execução, use os seguintes comandos:
+
+Listar todos os nós ativos:
+
+```bash
+ros2 node list
+```
+
+Obter informações detalhadas sobre um nó específico:
+
+```bash
+ros2 node info /my_first_node
+```
+
+## Argumentos e Parâmetros
+
+Você pode passar argumentos e parâmetros ROS aos nós usando `--ros-args`. Por exemplo, para renomear um nó durante a execução:
+
+```bash
+ros2 run my_py_pkg my_first_node --ros-args -r __node:=my_first_node_renamed
+```
+
+Isso permite executar múltiplas instâncias do mesmo nó com nomes diferentes.

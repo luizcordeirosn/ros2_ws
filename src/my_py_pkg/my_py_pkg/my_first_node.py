@@ -10,9 +10,10 @@ class MyNode(Node):
         self.create_timer(1.0, self.timer_callback)
 
     def timer_callback(self):
-        self.get_logger().info(
-            f"Timer callback executed {self._counter} {'time' if self._counter == 1 else 'times'}."
-        )
+        # self.get_logger().info(
+        #     f"Timer callback executed {self._counter} {'time' if self._counter == 1 else 'x'}."
+        # )
+        self.get_logger().info(f"Timer callback executed {self._counter}x.")
         self._counter += 1
 
 
