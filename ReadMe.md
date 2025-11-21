@@ -71,3 +71,19 @@ ros2 run my_py_pkg my_first_node --ros-args -r __node:=my_first_node_renamed
 ```
 
 Isso permite executar múltiplas instâncias do mesmo nó com nomes diferentes.
+
+## Ferramentas gráficas
+
+O ROS 2 possui ferramentas visuais para inspeção e depuração:
+
+Para abrir o painel principal de plugins:
+```bash
+rqt
+```
+
+Para visualizar o grafo de nós e tópicos:
+```bash
+rqt_graph
+```
+
+Certifique-se de que o ambiente está carregado (com `source install/setup.bash`) antes de executar as ferramentas gráficas.
