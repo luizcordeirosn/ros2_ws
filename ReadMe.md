@@ -44,7 +44,14 @@ Para executar um nó do pacote, use o comando `ros2 run`:
 ros2 run my_py_pkg my_first_node
 ```
 
+Para executar o nó `robot_news_station`, renomeando o nó para `my_station` e remapeando o tópico `robot_news` para `news`:
+
+```bash
+ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_news:=news
+```
+
 Certifique-se de que o ambiente está carregado (com `source install/setup.bash`) antes de executar o nó.
+
 
 ## Inspeção
 
