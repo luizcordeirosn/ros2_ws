@@ -12,15 +12,13 @@ class NumberPublisher(Node):
             Int64, "number", self.callback_publish_number, 10
         )
         self.get_logger().info("Number counter node has been started.")
-        self._publisher = self.create_publisher(Int64, "number_counter", 10)
-        self._timer = self.create_timer(1.0, self.number_counter_publish)
+        self._publisher = self.create_publisher(Int64, "number_count", 10)
 
     def callback_publish_number(self, number: Int64):
         self._counter.data += number.data
 
         self.get_logger().info(f"Counter: {self._counter.data}")
 
-    def number_counter_publish(self):
         self._publisher.publish(self._counter)
 
 
