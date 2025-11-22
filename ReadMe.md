@@ -137,6 +137,44 @@ Publicar mensagens manualmente em um tópico, com taxa de 5 Hz:
 ros2 topic pub -r 5 /robot_news example_interfaces/msg/String "data: 'Hello from the terminal'"
 ```
 
+## Comandos ROS 2 Bag
+
+### Gravar tópicos
+
+```bash
+ros2 bag record /number_count
+```
+
+Grava o tópico `/number_count`.
+
+```bash
+ros2 bag record -o test /number_count
+```
+
+Grava o tópico `/number_count` e salva o arquivo na pasta `test/`.
+
+```bash
+ros2 bag record -o test_1 /number_count /number
+```
+
+Grava os tópicos `/number_count` e `/number` e salva o arquivo na pasta `test_1/`.
+
+### Informações do bag
+
+```bash
+ros2 bag info test/
+```
+
+Exibe informações sobre o bag salvo na pasta `test/`.
+
+### Reproduzir bag
+
+```bash
+ros2 bag play test/
+```
+
+Reproduz os dados gravados no bag da pasta `test/`.
+
 ## Interfaces
 
 Para visualizar a definição de uma mensagem utilizada por um tópico:
