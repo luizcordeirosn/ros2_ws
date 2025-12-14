@@ -69,16 +69,6 @@ Obter informações detalhadas sobre um nó específico:
 ros2 node info /my_first_node
 ```
 
-## Argumentos e Parâmetros
-
-Você pode passar argumentos e parâmetros ROS aos nós usando `--ros-args`. Por exemplo, para renomear um nó durante a execução:
-
-```bash
-ros2 run my_py_pkg my_first_node --ros-args -r __node:=my_first_node_renamed
-```
-
-Isso permite executar múltiplas instâncias do mesmo nó com nomes diferentes.
-
 ## Ferramentas gráficas
 
 O ROS 2 possui ferramentas visuais para inspeção e depuração:
@@ -181,3 +171,13 @@ Para visualizar a definição de uma mensagem utilizada por um tópico:
 ```bash
 ros2 interface show example_interfaces/msg/String
 ```
+
+## Serviços
+
+Para chamar um serviço (por exemplo, somar dois inteiros):
+
+```bash
+ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "a: 1\nb: 2"
+```
+
+Chama o serviço `/add_two_ints` do tipo `example_interfaces/srv/AddTwoInts` passando os valores `a=1` e `b=2`.
