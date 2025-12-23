@@ -50,6 +50,12 @@ Para executar o nó `robot_news_station`, renomeando o nó para `my_station` e r
 ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_news:=news
 ```
 
+Para executar o servidor de serviço `add_two_ints_server` remapeando o serviço `add_two_ints` para `abc`:
+
+```bash
+ros2 run my_py_pkg add_two_ints_server --ros-args -r add_two_ints:=abc
+```
+
 Certifique-se de que o ambiente está carregado (com `source install/setup.bash`) antes de executar o nó.
 
 
@@ -175,9 +181,18 @@ ros2 interface show example_interfaces/msg/String
 ## Serviços
 
 Para chamar um serviço (por exemplo, somar dois inteiros):
-
 ```bash
 ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "a: 1\nb: 2"
 ```
 
 Chama o serviço `/add_two_ints` do tipo `example_interfaces/srv/AddTwoInts` passando os valores `a=1` e `b=2`.
+ 
+Listar todos os serviços disponíveis:
+```bash
+ros2 service list
+```
+
+Verificar o tipo de um serviço específico:
+```bash
+ros2 service type /add_two_ints
+```
