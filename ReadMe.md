@@ -178,6 +178,16 @@ Para visualizar a definição de uma mensagem utilizada por um tópico:
 ros2 interface show example_interfaces/msg/String
 ```
 
+Listar todas as interfaces disponíveis:
+```bash
+ros2 interface list
+```
+
+Listar todas as interfaces de um pacote específico:
+```bash
+ros2 interface package my_robot_interfaces
+```
+
 ## Serviços
 
 Para chamar um serviço (por exemplo, somar dois inteiros):
