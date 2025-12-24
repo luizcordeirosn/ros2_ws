@@ -37,6 +37,6 @@ def main(args=None):
 
     add_two_ints_client.call_add_two_ints(3, 7)
 
-    rclpy.spin_once(add_two_ints_client)
+    rclpy.spin(add_two_ints_client)
 
     rclpy.shutdown()
