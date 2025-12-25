@@ -92,9 +92,15 @@ ros2 run my_py_pkg number_publisher --ros-args -p number:=3 -p timer_period:=0.5
 
 ## 3. Parâmetros
 
+
 ### Listar todos os parâmetros disponíveis
 ```bash
 ros2 param list
+```
+
+### Obter o valor de um parâmetro específico
+```bash
+ros2 param get /turtlesim background_b
 ```
 
 ---
