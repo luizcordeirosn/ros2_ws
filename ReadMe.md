@@ -109,6 +109,11 @@ ros2 param list
 ros2 param get /turtlesim background_b
 ```
 
+### Definir o valor de um parâmetro em tempo de execução
+```bash
+ros2 param set /number_publisher number 4
+```
+
 ---
 
 ## 4. Inspeção de Nós
