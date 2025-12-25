@@ -83,9 +83,15 @@ ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_
 ros2 run my_py_pkg add_two_ints_server --ros-args -r add_two_ints:=abc
 ```
 
+
 ### Executar publisher com parâmetros
 ```bash
 ros2 run my_py_pkg number_publisher --ros-args -p number:=3 -p timer_period:=0.5
+```
+
+### Executar publisher usando arquivo de parâmetros YAML
+```bash
+ros2 run my_py_pkg number_publisher --ros-args --params-file ~/yaml_params/number_params.yaml
 ```
 
 ---
