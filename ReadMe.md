@@ -67,6 +67,14 @@ source install/setup.bash
 ---
 
 ## 2. Execução de Nós
+---
+
+## 2.1. Lançamento de Aplicações
+
+### Lançar aplicação com arquivo de launch XML
+```bash
+ros2 launch my_robot_bringup number_app.launch.xml
+```
 
 ### Executar um nó simples
 ```bash
