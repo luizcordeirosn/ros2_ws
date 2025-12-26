@@ -102,6 +102,11 @@ ros2 run my_py_pkg number_publisher --ros-args -p number:=3 -p timer_period:=0.5
 ros2 run my_py_pkg number_publisher --ros-args --params-file ~/yaml_params/number_params.yaml
 ```
 
+### Executar publisher em um namespace diferente
+```bash
+ros2 run my_py_pkg number_publisher --ros-args -r __ns:=/test
+```
+
 ---
 
 ## 3. Parâmetros
